@@ -1,0 +1,348 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@700&display=swap');
+
+/************************************************************************************/
+ /*ENTIRE DOCUMENT */
+* { 
+	-webkit-box-sizing: border-box; 
+	-moz-box-sizing: border-box; 
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	font-family: 'Karla', sans-serif;
+
+}
+
+*:before, *:after { 
+	-webkit-box-sizing: inherit; 
+	-moz-box-sizing: inherit; 
+	box-sizing: inherit; 
+}
+
+html { 	
+	height: 100%; 
+}
+
+body {
+	height: 100%; 
+	background-color: lightblue;
+}
+
+a {
+	text-decoration: none;
+}
+
+
+
+
+ /*ENTIRE DOCUMENT */
+/************************************************************************************/
+
+/************************************************************************************/
+ /*VIDEO AND LOGO BACKGROUND */
+#video-viewport {
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	overflow: hidden; 
+	z-index: -1;
+}
+
+video { 
+	display: block; 
+	width: 100%; 
+	height: auto; 
+}
+
+.fullsize-video-bg { 
+	height: 100%; 
+	overflow: hidden; 
+}
+
+.fullsize-video-bg:before { 
+	content: ""; 
+	background: rgba(173,216,230, 0.3); 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%;
+	height: 100%; 
+	z-index: 0; 
+}
+
+.fullsize-video-bg:after { 
+	content: ""; 
+	position: absolute; 
+	top: 0; 
+	left: 0; 
+	width: 100%; 
+	height: 100%; 
+	z-index: 1; 
+}
+
+
+.fullsize-video-bg .inner { 
+	display: table; 
+	width: 100%; 
+	max-width: 24em; 
+	height: 100%; 
+	margin: 0 auto; 
+	padding: 0; 
+	position: relative; 
+	z-index: 1; 
+	text-shadow: 0 1px 5px rgba(0,0,0,.5); 
+}
+
+.fullsize-video-bg .inner > div { 
+	text-align: center; 
+	display: table-cell; 
+	vertical-align: middle; 
+	padding: 0 2em; 
+}
+ /*VIDEO AND LOGO BACKGROUND */
+/************************************************************************************/
+
+
+/************************************************************************************/
+ /*Navigation Menus*/
+ nav{
+ 	text-transform: uppercase;
+	width: 100%;
+	text-align: center;
+	z-index: 5;
+ }
+
+.regNav{
+	position: absolute;
+	padding-top: 30px;
+	font-size: 1.2em;
+	top: 0;
+}
+
+.regNav a {
+	margin-right: 30px;
+	text-transform: uppercase;
+	background-color: rgba(0,0,0,0.7);
+	padding: 15px;
+	border-radius: 25px;
+	text-shadow: 2px 2px rgba(0,120,215,1);
+	color: lightblue;
+	display: inline-block;
+}
+
+.regNav a:hover {
+	box-shadow: 2px 2px #1E90FF;
+	border-bottom: black solid 1px;
+}
+
+.regNavResponsive {
+ 	display: flex;
+	flex-direction: column;
+	position: absolute;
+	text-transform: uppercase;
+	align-items: center;
+  	justify-content: center;
+ }
+ .regNavResponsive a{
+ 	margin-bottom:  6vh;
+ 	color: black;
+ 	padding-bottom: 10px;
+ 	z-index: 5;
+ }
+
+ .regNavResponsive a:hover {
+ 	border-bottom: black solid 1px;
+ }
+ /*Navigation Menus*/
+/************************************************************************************/
+
+/************************************************************************************/
+/*SHOPPING CART/*/
+.shop-cart-button {
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background-color: transparent;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  color:red;
+  z-index: 10;
+}
+/*SHOPPING CART/
+/************************************************************************************/
+
+/************************************************************************************/
+ /*Hamburger and animation */
+ .menu-btn {
+  	position: absolute;
+  	cursor: pointer;
+  	display: none;
+  	transition: all .5s ease-in-out;
+  	margin-right: 15%;
+	margin-top: 8%;
+  	height: 50px;
+  	border-radius: 15px;
+  	font-size: 30px;
+  	right: 0;
+  	top: 0;
+  	z-index: 10;
+}
+
+.menu-btn__burger {
+  width: 50px;
+  height: 6px;
+  background: lightblue;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before,
+.menu-btn__burger::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50px;
+  height: 6px;
+  background: black;
+  border-radius: 5px;
+  transition: all .5s ease-in-out;
+}
+
+.menu-btn__burger::before {
+  transform: translateY(-16px);
+}
+
+.menu-btn__burger::after {
+  transform: translateY(16px);
+}
+
+/* ANIMATION */
+.menu-btn.open .menu-btn__burger {
+  transform: translateX(-50px);
+  background: transparent;
+}
+
+.menu-btn.open .menu-btn__burger::before {
+  transform: rotate(45deg) translate(35px, -35px);
+}
+
+.menu-btn.open .menu-btn__burger::after {
+  transform: rotate(-45deg) translate(35px, 35px);
+}
+/*Hamburger and animation */
+/************************************************************************************/
+
+/************************************************************************************/
+/*SOCIAL MEDIA ICONS*/
+.icon-bar {
+  position: fixed;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 7;
+  display: block;
+}
+
+/* Style the icon bar links */
+.icon-bar a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 10px;
+}
+
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.icon-bar-1 {
+position: fixed;
+  top: 70%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+  z-index: 7;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Karla', sans-serif;
+}
+
+
+.icon-bar-1 a {
+  display: block;
+  text-align: center;
+  padding: 10px;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 20px;
+}
+
+.icon-bar a:hover {
+  background-color: #000;
+}
+
+.donate {
+	background: #f4b9;
+	color: white;
+}
+
+
+
+.facebook {
+  background: #3B5998;
+  color: white;
+}
+
+.twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.instagram {
+  background: purple;
+  color: white;
+}
+/*SOCIAL MEDIA ICONS*/
+/************************************************************************************/
+
+
+/************************************************************************************/
+/*Responsive design*/
+@media screen and (max-width: 950px) {
+  	.menu-btn {
+  		display: flex;
+  	}
+	
+
+	.regNav{
+		display: none;
+	}
+
+	.regNavResponsive{
+		display: flex;
+
+	}
+
+	.inner img {
+		height: auto;
+		width: 80vw;
+	}
+
+	nav {
+		height: 100%;
+	}
+
+
+
+	.shop-cart-button {
+ 		left: 0;
+  		top: 0;
+	}			
+} 
+/*Responsive design*/
+/************************************************************************************/
