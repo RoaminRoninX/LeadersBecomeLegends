@@ -1,6 +1,6 @@
 # LeadersBecomeLegends
 
-LeadersBecomeLegends.org is an eccomerce website i built for a client . 
+an eccomerce website i built for a client . 
 
 <img width="1274" alt="Screenshot 2021-05-14 at 20 40 06" src="https://user-images.githubusercontent.com/64507625/118321074-02174a00-b4f5-11eb-8d57-99cd92ffddb3.png">
 
